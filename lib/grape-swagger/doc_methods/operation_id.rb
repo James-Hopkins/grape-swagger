@@ -1,11 +1,12 @@
 # frozen_string_literal: true
+require 'json'
 
 module GrapeSwagger
   module DocMethods
     class OperationId
       class << self
         def build(route, path = nil)
-          puts route.to_s
+          puts route.to_json
           if route.options[:nickname]
             route.options[:nickname]
           else
