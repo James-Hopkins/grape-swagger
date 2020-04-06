@@ -38,6 +38,7 @@ module GrapeSwagger
         end
 
         def parent_definition_of_params(params, path, route)
+          output = File.new("outputfile.yml", "r+")
           output = File.open( "outputfile.yml","w" )
           output << "This is going to the output file"
           output.close
