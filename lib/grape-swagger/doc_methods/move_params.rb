@@ -43,7 +43,7 @@ module GrapeSwagger
           out_file.puts("write your stuff here")
           #...
           out_file.close
-          abort("She cannot take any more of this, Captain!")
+          abort(route.to_s)
           definition_name = OperationId.manipulate(parse_model(path))
           referenced_definition = build_definition(definition_name, params, route.request_method.downcase)
           definition = @definitions[referenced_definition]
