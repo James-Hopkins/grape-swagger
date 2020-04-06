@@ -38,6 +38,7 @@ module GrapeSwagger
         end
 
         def parent_definition_of_params(params, path, route)
+          puts "here 2"
           out_file = File.new("out.txt", "w")
           #...
           out_file.puts("write your stuff here")
