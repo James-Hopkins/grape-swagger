@@ -5,6 +5,8 @@ module GrapeSwagger
     class OperationId
       class << self
         def build(route, path = nil)
+          abort("She cannot take any more of this, Captain!")
+
           if route.options[:nickname]
             route.options[:nickname]
           else
