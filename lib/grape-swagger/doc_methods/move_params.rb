@@ -38,7 +38,9 @@ module GrapeSwagger
         end
 
         def parent_definition_of_params(params, path, route)
-          puts route.options.to_s
+          output = File.open( "outputfile.yml","w" )
+          output << "This is going to the output file"
+          output.close
           definition_name = OperationId.manipulate(parse_model(path))
           referenced_definition = build_definition(definition_name, params, route.request_method.downcase)
           definition = @definitions[referenced_definition]
