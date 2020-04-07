@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 require 'json'
-require 'oj'
 
 module GrapeSwagger
   module DocMethods
