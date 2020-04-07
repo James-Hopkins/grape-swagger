@@ -7,7 +7,7 @@ module GrapeSwagger
       class << self
         def build(route, path = nil)
           puts "not working"
-          abort(route.options.to_json)
+          abort(route.options[:nickname].to_json)
           if route.options[:nickname]
             route.options[:nickname]
           else
