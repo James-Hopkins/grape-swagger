@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 require 'json'
+require 'oj'
 
 module GrapeSwagger
   module DocMethods
     class OperationId
       class << self
         def build(route, path = nil)
-          puts route.to_json
+          puts Oj::dump route, :indent => 2
+          abort("opid line 10")
           if route.options[:nickname]
             route.options[:nickname]
           else
