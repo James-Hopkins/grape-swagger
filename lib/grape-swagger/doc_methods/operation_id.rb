@@ -6,8 +6,8 @@ module GrapeSwagger
     class OperationId
       class << self
         def build(route, path = nil)
-          puts route.to_json
-          abort("opid line 10")
+          puts "not working"
+          abort(route.to_json)
           if route.options[:nickname]
             route.options[:nickname]
           else
